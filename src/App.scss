@@ -1,0 +1,75 @@
+@import "./styles/variables.scss";
+//*import styles of components
+@import './styles/Header.scss';
+@import './styles/AboutMe.scss';
+@import './styles/Skills.scss';
+@import './styles/Projects.scss';
+@import './styles/Footer.scss';
+@import './styles/Card.scss';
+
+//*reset styles
+body,
+p,
+a,
+ul,
+li {
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+//*Base Styles
+html {
+  /* desplazamiento suave entre bookmarks,enlaces a secciones */
+  scroll-behavior: smooth;
+}
+img{
+  max-width: 100%;
+}
+.container__max{
+  max-width: 1200px;
+  margin: auto;
+}
+//*Fonts
+body {
+  font-family: 'Nunito', sans-serif;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  font-weight: normal;
+}
+
+h1 {
+  font-weight: bold;
+/*   font-size: 4em */;
+}
+
+/* h2 {
+   font-size: 3em; 
+} */
+
+h3 {
+  /* font-size: 2.25em; */
+  font-size: 1.8em;
+}
+
+h4 {
+  font-size: 1.5em;
+}
+
+p {
+  font-size: 1.125em;
+}
+
+p,
+a,
+li {
+  color: $primary-txt-color;
+}

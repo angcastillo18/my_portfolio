@@ -1,0 +1,93 @@
+@import "./variables.scss";
+@import './mixins.scss';
+
+
+.section__footer
+{
+    background-color:$secondary-bg-color ;
+    color: $secondary-txt-color;
+    .container__max{
+        padding: 3rem 1.3rem;
+        .contact{
+            h3{
+                text-align: center;
+                margin: 1rem 0;
+            }
+            &__socialMedia{
+                text-align: center;
+                &-email{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    img{
+                        width: 2rem;
+                        margin-right: 0.5rem;
+                    }
+                    p{
+                        display: inline;
+                    }
+                }
+                &-links{
+                    display: flex;
+                    justify-content: space-around;
+                    width: 50%;
+                    margin: 1rem auto;
+                    svg{
+                        font-size: 1.7rem;
+                    }
+                }
+            }
+        }
+    }
+    footer{
+        background-color: #EEEEEE;
+        padding: 1rem 0;
+        p{
+            
+            text-align: center;
+            color: $secondary-txt-color;
+        }
+    }
+}
+
+@include media-sm{
+    .section__footer
+    {
+        font-size: 18px;
+        .container__max{
+            .contact{
+                &__socialMedia{
+                    &-links{
+
+                        width: 22%;
+                        margin: 1.3rem auto;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media-lg{
+    .section__footer
+    {
+        .container__max{
+            .contact{
+                h3{
+                    text-align: left;
+                }
+                &__socialMedia{
+                    text-align: initial;
+                    display: flex;
+                    justify-content: space-between;
+
+                    &-links{
+                        width: 24%;
+                        margin: 1rem 0;
+                    }
+                }
+            }
+        }
+    }
+}
+

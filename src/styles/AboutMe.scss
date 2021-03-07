@@ -1,0 +1,85 @@
+@import "./variables.scss";
+@import './mixins.scss';
+
+.aboutMe{
+    background-color: $primary-bg-color;
+    .container__max{
+        display: flex;
+        flex-direction: column;
+        //!important padding
+        padding: 3rem 1.3rem;
+        .content-left{
+            h3{
+                display: inline-block;
+                color: $secondary-bg-color ;
+                margin: 1rem 0;
+                padding-left: 0.6rem;
+                border-left: 2px solid #017980;
+            }
+            p{
+                color:$primary-txt-color;
+                margin: 0.8rem 0;
+                line-height: 1.5rem;
+            }
+
+        }
+        .content-right{
+            margin-top: 1rem;
+            padding: 1rem 0;
+        }
+    }
+}
+//*Responsive Design
+@include media-sm{
+    .aboutMe{
+
+        .container__max{
+            flex-direction: row;
+            .content-left{
+                width: 50%;
+                padding-right: 0.8rem;
+            }
+            .content-right{
+                width: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-left: 0.8rem;
+            }
+        }
+    }
+}
+@include media-md{
+    .aboutMe{
+        padding: 3rem 0;
+        .container__max{
+            .content-left{
+                padding: 0  0.8rem;
+            }
+            .content-right{
+                padding: 0 0.8rem;
+            }
+        }
+    }
+}
+@include media-lg{
+    .aboutMe{
+        .container__max{
+            .content-left{
+                padding: 0  0.8rem;
+                //*cambiando el font
+                font-size: 18px;
+                p{
+                    line-height: 1.7rem;
+                }
+            }
+            .content-right{
+
+                padding: 0 0.8rem;
+                img{
+                    max-height: 18rem;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,77 @@
+@import "./variables.scss";
+@import './mixins.scss';
+
+
+.mySkills{
+    background-color: #EEEEEE;
+    .container__max{
+        padding: 3rem 1.3rem;
+        header{
+            h3{
+                display: inline-block;
+                color: $secondary-bg-color ;
+                margin: 1rem 0;
+                padding-left: 0.6rem;
+                border-left: 2px solid $secondary-bg-color;
+            }
+            p{
+                margin: 0.8rem 0;
+                color:$tertiary-bg-color;
+                line-height: 1.5rem;
+            }
+        }
+        .skills__content{
+            h4{
+                margin-top: 2.4rem;
+                color: $secondary-bg-color ;
+                text-align: center;
+            }
+            div{
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                svg{
+                    margin: 0.7rem;
+                    font-size: 3.5rem;
+                }
+            }
+        }
+    }
+}
+//*Responsive Styles
+@include media-sm{
+    .mySkills{
+    font-size: 18px;
+    padding: 2rem 0;
+    .container__max{
+        header{
+            max-width: 80%;
+            margin: 1rem auto;
+            h3{
+                text-align: center;
+                display: block;
+                padding-left: 0;
+                border-left: none;
+            }
+            p{
+                text-align: center;
+            }
+        }
+        .skills__content{
+            div{
+                max-width: 80%;
+                margin: auto;
+                svg{
+                    font-size: 3.8rem;
+                }
+            }
+        }
+    }
+    }
+}
+@include media-md{
+    .mySkills{
+    font-size: 19px;
+
+    }
+}
